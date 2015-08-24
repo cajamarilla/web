@@ -1,0 +1,23 @@
+{% extends '::frontend.html.twig' %}
+
+
+{% block body %}
+	<h1>Agregar Usuario</h1>
+    
+    <ol class="breadcrumb">
+        <li><a href="{{asset('home/administracion/usuario')}}">Usuarios Agregados</a></li>
+        <li class="active">Agregar usuario</li>
+    </ol>
+    
+    {{ form_start(form) }}
+    
+        <p> Nombre : {{form_widget(form.nombre)}}  </p>
+        <p> Correo : {{form_widget(form.correo)}}  </p>
+		<p> Contraseña : {{form_widget(form.pass)}}  </p>
+        <p>            <hr />
+            {{form_widget(form.Guardar)}}
+        </p>
+        
+     {{ form_end(form) }}
+   
+{% endblock %}

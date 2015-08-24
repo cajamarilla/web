@@ -1,0 +1,46 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+    <h1>Usuarios Registrados</h1>
+     <ol class="breadcrumb">
+        <li><a href="{{asset('home/administracion')}}">Administración</a></li>
+        <li class="active">Usuarios Registrados</li>
+    </ol>
+    
+    
+     {% for flashMessage in app.session.flashbag.get('mensaje') %}
+    <span class="alert-success">
+        {{ flashMessage }}
+        <hr />
+    </span>
+    {% endfor %}
+    
+         
+     <a href="{{asset('usuario/agregar')}}" title="Agregar Nuevo Usuario" class="btn btn-success">Agregar Nuevo Usuario</a>
+    <hr />
+    <table class="table table-bordered">
+        <tbody>
+            <th>Nombre</th>
+            <th>Correo</th>
+			<th>Contraseña</th>
+            <th>Acciones</th>
+        </tbody>
+       {% for dato in datos %}
+        <tr>
+            <td>{{dato.nombre}}</td>
+            <td>{{dato.correo}}</td>
+            <td>{{dato.pass}}</td>
+			<td>
+                 <a href="{{asset('usuario/editar')}}/{{dato.id}}" title="Editar">Editar</a>
+                -
+                 <a href="{{asset('usuario/eliminar')}}/{{dato.id}}" title="Eliminar">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+<hr />
+	 <p><a href="{{path('bd_homepagelogout')}}">Logout</a></p>
+	 <p><a href="{{path('bd_homepage')}}">Volver a home</a></p>
+{% endblock %}

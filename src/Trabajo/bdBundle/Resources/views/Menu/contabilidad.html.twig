@@ -1,0 +1,21 @@
+{% extends '::frontend.html.twig' %}
+
+
+{% block body %}
+	<h1 class="clase">Contablilidad</h1>
+	
+	<hr />	
+	<a href="{{ asset('home/facturacion') }}">Facturación</a>
+	<a href="{{ asset('home/contabilidad') }}">Contabilidad</a>
+	<a href="{{ asset('home/administracion') }}">Administración</a>
+	<hr />	
+	<a href="{{ asset('contabilidad/lventa') }}">libro venta</a>
+	<a href="{{ asset('contabilidad/fcompra') }}">Facturas de compra</a>
+	<a href="{{ asset('contabilidad/fventa') }}">Facturas de venta</a>
+	
+	<hr />
+	<img src="{{ asset('public/images/estamos-trabajando.png') }}" class="ima" />
+	<hr />	
+	  <p><a href="{{path('bd_homepagelogout')}}">Logout</a></p>
+	 <p><a href="{{path('bd_homepage')}}">Volver a home</a></p>
+{% endblock %}

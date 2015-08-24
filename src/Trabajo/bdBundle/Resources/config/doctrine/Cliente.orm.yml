@@ -1,0 +1,33 @@
+Trabajo\bdBundle\Entity\Cliente:
+    type: entity
+    table: null
+    repositoryClass: Trabajo\bdBundle\Entity\ClienteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '20'
+        direccion:
+            type: string
+            length: '20'
+        rut:
+            type: integer
+            length: '9'
+        razon_social:
+            type: string
+            length: '100'
+        giro:
+            type: string
+            length: '100'
+        comuna:
+            type: string
+            length: '10'
+        ciudad:
+            type: string
+            length: '10'		
+    lifecycleCallbacks: {  }

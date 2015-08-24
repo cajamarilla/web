@@ -1,0 +1,44 @@
+{% extends '::frontend.html.twig' %}
+
+
+{% block body %}
+	<h1>Factura electronica</h1>
+    
+    <ol class="breadcrumb">
+        <li><a href="{{asset('home/facturacion')}}">Facturación</a></li>
+        <li class="active">Factura electronica (tipo 33)</li>
+    </ol>
+    
+    {{ form_start(form) }}
+    
+        <p> R.U.T.: {{form_widget(form.rut)}}  </p>
+        <p> Razón social: {{form_widget(form.nombre)}}  </p>
+		<p> Giro: {{form_widget(form.giro)}}  </p>
+		<p> Dirección: {{form_widget(form.direccion)}}  </p>
+        <p> Comuna: {{form_widget(form.comuna)}}  </p>
+		<p> Ciudad: {{form_widget(form.ciudad)}}  </p>
+		<p> Folio: {{form_widget(form.nombre)}}  </p>	
+		<p> Fecha Documento: {{form_widget(form.nombre)}}  </p>
+		<p> Fecha Contable: {{form_widget(form.nombre)}}  </p>	
+		<a href="{{asset('facturacion/seleccioncliente')}}" title="Buscar Cliente" class="btn btn-primary" target="popup">Buscar cliente</a>
+		<a href="{{asset('facturacion/seleccioncliente')}}" title="Agregar Cliente" class="btn btn-success" target="popup">Agregar cliente</a>
+		<p>           <hr />
+		<h3>Detalle factura</h3>
+       <table class="table table-bordered">
+        <tbody>
+            <th>Código</th>
+            <th>Descripción</th>
+			<th>Cantidad</th>
+            <th>Unitario</th>
+			<th>Descuento</th>
+			<th>Exento</th>
+			<th>Subtotal</th>
+        </tbody>
+	   </table>
+	   <hr />
+           
+        </p>
+        
+     {{ form_end(form) }}
+   
+{% endblock %}

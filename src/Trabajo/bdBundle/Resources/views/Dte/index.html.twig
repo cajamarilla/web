@@ -1,0 +1,46 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+   
+    
+     {% for flashMessage in app.session.flashbag.get('mensaje') %}
+    <span class="alert-success">
+        {{ flashMessage }}
+        <hr />
+    </span>
+	
+    {% endfor %}
+    
+ 
+    <hr />
+    <table class="table table-bordered">
+        <tbody>
+            <th>Nombre</th>
+            <th>Rut</th>
+			<th>Razón social</th>
+            <th>Comuna</th>
+			<th>Giro</th>
+            <th>Dirección</th>
+			<th>Ciudad</th>
+			<th>Acción</th>
+        </tbody>
+       {% for dato in datos %}
+        <tr>
+            <td>{{dato.nombre}}</td>
+            <td>{{dato.rut}}</td>
+            <td>{{dato.razon_social}}</td>
+			<td>{{dato.comuna}}</td>
+			<td>{{dato.giro}}</td>
+            <td>{{dato.direccion}}</td>
+			<td>{{dato.ciudad}}</td>
+			<td>
+                 <a href="{{asset('factura/seleccionado')}}/{{dato.id}}" title="Seleccionar">Seleccionar</a>
+                
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+<hr />
+	{% endblock %}

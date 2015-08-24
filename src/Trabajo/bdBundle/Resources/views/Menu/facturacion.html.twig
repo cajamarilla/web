@@ -1,0 +1,21 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+	<h1 class="clase">Facturación</h1>
+	
+	<hr />	
+	<a href="{{ asset('home/facturacion') }}">Facturación</a>
+	<a href="{{ asset('home/contabilidad') }}">Contabilidad</a>
+	<a href="{{ asset('home/administracion') }}">Administración</a>
+	<hr />	
+	<a href="{{ asset('facturacion/facturacion') }}">Factura electronica</a>
+	<a href="{{ asset('facturacion/facturaexenta') }}">Factura exenta</a>
+	<a href="{{ asset('facturacion/ncredito') }}">Nota Credito</a>
+	<a href="{{ asset('facturacion/gdespacho') }}">Guía despacho</a>
+	<a href="{{ asset('facturacion/respaldos') }}">Respaldos</a>
+	<hr />
+	<img src="{{ asset('public/images/estamos-trabajando.png') }}" class="ima" />
+	<hr />	
+	 <p><a href="{{path('bd_homepagelogout')}}">Logout</a></p>
+	 <p><a href="{{path('bd_homepage')}}">Volver a home</a></p>
+{% endblock %}

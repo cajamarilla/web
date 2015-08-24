@@ -1,0 +1,69 @@
+bd_homepage:
+    path:     /home
+    defaults: { _controller: bdBundle:Trabajo:index }
+bd_homepagedos:
+    path:     /home
+    defaults: { _controller: bdBundle:Trabajo:dos }
+bd_homepagelogin:
+    path:     /login
+    defaults: { _controller: bdBundle:Trabajo:login }
+bd_homepagelogout:
+    path:     /logout
+    defaults: { _controller: bdBundle:Trabajo:logout }
+bd_facturacion:
+    path:     /home/facturacion
+    defaults: { _controller: bdBundle:Menu:facturacion }
+bd_factura:
+    path:     /facturacion/facturacion
+    defaults: { _controller: bdBundle:Dte:agregar}
+bd_facturaseleccionado:
+    path:     /factura/seleccionado/{id}
+    defaults: { _controller: bdBundle:Dte:seleccion}
+bd_facturaexenta:
+    path:     /facturacion/facturaexenta
+    defaults: { _controller: bdBundle:Dte:indexexenta}
+bd_facturancredito:
+    path:     /facturacion/ncredito
+    defaults: { _controller: bdBundle:Dte:ncredito}
+bd_facturagdespacho:
+    path:     /facturacion/gdespacho
+    defaults: { _controller: bdBundle:Dte:gdespacho}
+bd_respaldos:
+    path:     /facturacion/respaldos
+    defaults: { _controller: bdBundle:Dte:respaldos}
+bd_lventa:
+    path:     /contabilidad/lventa
+    defaults: { _controller: bdBundle:Contabilidad:lventa}
+bd_fventa:
+    path:     /contabilidad/fventa
+    defaults: { _controller: bdBundle:Contabilidad:fventa}
+bd_fcompra:
+    path:     /contabilidad/fcompra
+    defaults: { _controller: bdBundle:Contabilidad:fcompra}
+bd_seleccioncliente:
+    path:     /facturacion/seleccioncliente
+    defaults: { _controller: bdBundle:Dte:index}
+bd_seleccion:
+    path:     /facturacion/seleccion/{id}
+    defaults: { _controller: bdBundle:Dte:seleccion}
+bd_contabilidad:
+    path:     /home/contabilidad
+    defaults: { _controller: bdBundle:Menu:contabilidad }
+bd_otros:
+    path:     /home/otros
+    defaults: { _controller: bdBundle:Menu:otros }
+bd_administracion:
+    path:     /home/administracion
+    defaults: { _controller: bdBundle:Menu:administracion }
+bd_usuario:
+    path:     /home/administracion/usurio
+    defaults: { _controller: bdBundle:Usuario:index }
+bd_usuarioagregar:
+    path:     /usuario/agregar
+    defaults: { _controller: bdBundle:Usuario:agregar}
+bd_Menudelete:
+    path:     /usuario/eliminar/{id}
+    defaults: { _controller: bdBundle:Usuario:eliminar }	
+bd_usuarioeditar:
+    path:     /usuario/editar/{id}
+    defaults: { _controller: bdBundle:Usuario:editar}

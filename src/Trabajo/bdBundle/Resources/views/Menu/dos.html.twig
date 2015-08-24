@@ -1,0 +1,20 @@
+{% extends '::frontend.html.twig' %}
+
+
+
+
+{% block body %}
+	<h1 class="clase">Facturación</h1>
+	
+	<hr />	
+	<a href="{{ asset('plantilla/facturacion') }}">Facturacion</a>
+	<a href="{{ asset('plantilla/contabilidad') }}">Contabilidad</a>
+	<a href="{{ asset('plantilla/administracion') }}">Administración</a>
+	<hr />	
+	<a href="{{ asset('plantilla/Factura electronica') }}">Factura electronica</a>
+	<a href="{{ asset('plantilla/Factura excenta IVA') }}">Factura excenta</a>
+	<a href="{{ asset('plantilla/Nota Credito') }}">Nota Credito</a>
+	<a href="{{ asset('plantilla/Guía despacho') }}">Guía despacho</a>
+	<hr />
+	<img src="{{ asset('public/images/estamos-trabajando.png') }}" class="ima" />
+{% endblock %}

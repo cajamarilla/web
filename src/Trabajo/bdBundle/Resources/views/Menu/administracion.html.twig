@@ -1,0 +1,20 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+	<h1 class="clase">Administración</h1>
+	
+	<hr />	
+	<a href="{{ asset('home/facturacion') }}">Facturación</a>
+	<a href="{{ asset('home/contabilidad') }}">Contabilidad</a>
+	<a href="{{ asset('home/administracion') }}">Administración</a>
+	<hr />	
+	<a href="{{ asset('home/administracion/usurio') }}">Administración usuarios</a>
+	<a href="{{ asset('home/Estado de Equipos') }}">Estado de Equipos</a>
+	<a href="{{ asset('home/Estado de Respaldos y licencias') }}">Respaldos y licencias</a>
+	<a href="{{ asset('home/Control de Soporte') }}">Control de Soporte</a>
+		<hr />
+	<img src="{{ asset('public/images/estamos-trabajando.png') }}" class="ima" />
+	<hr />
+	 <p><a href="{{path('bd_homepagelogout')}}">Logout</a></p>
+	 <p><a href="{{path('bd_homepage')}}">Volver a home</a></p>
+{% endblock %}

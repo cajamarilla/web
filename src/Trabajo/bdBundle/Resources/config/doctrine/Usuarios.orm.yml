@@ -1,0 +1,21 @@
+Trabajo\bdBundle\Entity\Usuarios:
+    type: entity
+    table: null
+    repositoryClass: Trabajo\bdBundle\Entity\UsuariosRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '100'
+        correo:
+            type: string
+            length: '100'
+        pass:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

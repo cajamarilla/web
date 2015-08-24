@@ -1,0 +1,23 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+  
+    
+    <h1>Bienvenido al Sistema de Facturacion, Contable y Administrativo</h1>
+   
+     <p>
+        Bienvenido Usuario:  <span class="label label-primary">{{app.session.get('nombre')}}</span>
+     </p>
+     
+	<hr />	
+	<a href="{{ asset('home/facturacion') }}">Facturacion</a>
+	<a href="{{ asset('home/contabilidad') }}">Contabilidad</a>
+	<a href="{{ asset('home/administracion') }}">Administración</a>
+	
+	<hr />
+	<img src="{{ asset('public/images/estamos-trabajando.png') }}" class="ima" />
+	<hr />	
+    <p><a href="{{path('bd_homepagelogout')}}">Salir</a></p>
+    
+{% endblock %}

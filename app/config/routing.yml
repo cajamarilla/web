@@ -1,0 +1,4 @@
+bd:
+    resource: "@bdBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,17 @@
+Trabajo\bdBundle\Entity\Dte:
+    type: entity
+    table: null
+    repositoryClass: Trabajo\bdBundle\Entity\DteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        tipo:
+            type: integer
+            length: '11'
+        fecha_vencimiento:
+            type: date       
+    lifecycleCallbacks: {  }

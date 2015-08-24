@@ -1,0 +1,14 @@
+{% extends '::frontend.html.twig' %}
+
+{% block body %}
+
+  
+    
+    <h1>Bienvenidos 2</h1>
+   <p>
+        Hola <span class="label label-primary">{{app.session.get('nombre')}}</span>
+     </p>
+     
+    <p><a href="{{path('bd_homepagelogout')}}">Salir</a></p>
+
+{% endblock %}
